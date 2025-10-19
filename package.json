@@ -1,10 +1,9 @@
 {
     "name": "project-1",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "./src/app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "node . --watch"
     },
     "keywords": [],
@@ -15,11 +14,16 @@
         "extends": "standard"
     },
     "dependencies": {
+        "@prisma/client": "^6.17.1",
         "dotenv": "^17.2.3",
-        "express": "5.1.0"
+        "express": "5.1.0",
+        "pg": "^8.16.3"
     },
     "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/node": "^24.8.1",
         "prettier": "^3.6.2",
+        "prisma": "^6.17.1",
         "standard": "^17.1.2"
     }
 }

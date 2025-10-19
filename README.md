@@ -22,13 +22,13 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | ----------------- | ------------------------- | :----: |
 | Lenguaje          | Node.js (v20+)            |  [x]   |
 | Framework         | Express.js                |  [x]   |
-| ORM               | Prisma                    |  [ ]   |
-| Base de datos     | PostgreSQL                |  [ ]   |
+| ORM               | Prisma                    |  [x]   |
+| Base de datos     | PostgreSQL                |  [x]   |
 | Validación        | Zod                       |  [ ]   |
 | Autenticación     | JWT + bcrypt              |  [ ]   |
 | Seguridad         | helmet, cors              |  [ ]   |
 | Logging           | morgan                    |  [ ]   |
-| Variables entorno | dotenv                    |  [ ]   |
+| Variables entorno | dotenv                    |  [x]   |
 | Testing           | Jest + Supertest          |  [ ]   |
 | Despliegue        | Render / Railway / Fly.io |  [ ]   |
 | Bonus             | Docker + Swagger          |  [ ]   |
