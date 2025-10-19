@@ -7,6 +7,7 @@ API REST desarrollada con **Node.js + Express + Prisma + PostgreSQL**, que permi
 ## 🚀 Objetivo
 
 Construir una API profesional y modular aplicando buenas prácticas de backend:
+
 - Arquitectura escalable
 - Seguridad (JWT, roles)
 - Validación de datos
@@ -17,20 +18,20 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 
 ## 🧱 Stack Tecnológico
 
-| Categoría | Tecnología | Estado |
-|------------|-------------|:------:|
-| Lenguaje | Node.js (v20+) | [x] |
-| Framework | Express.js | [x] |
-| ORM | Prisma | [ ] |
-| Base de datos | PostgreSQL | [ ] |
-| Validación | Zod | [ ] |
-| Autenticación | JWT + bcrypt | [ ] |
-| Seguridad | helmet, cors | [ ] |
-| Logging | morgan | [ ] |
-| Variables entorno | dotenv | [ ] |
-| Testing | Jest + Supertest | [ ] |
-| Despliegue | Render / Railway / Fly.io | [ ] |
-| Bonus | Docker + Swagger | [ ] |
+| Categoría         | Tecnología                | Estado |
+| ----------------- | ------------------------- | :----: |
+| Lenguaje          | Node.js (v20+)            |  [x]   |
+| Framework         | Express.js                |  [x]   |
+| ORM               | Prisma                    |  [ ]   |
+| Base de datos     | PostgreSQL                |  [ ]   |
+| Validación        | Zod                       |  [ ]   |
+| Autenticación     | JWT + bcrypt              |  [ ]   |
+| Seguridad         | helmet, cors              |  [ ]   |
+| Logging           | morgan                    |  [ ]   |
+| Variables entorno | dotenv                    |  [ ]   |
+| Testing           | Jest + Supertest          |  [ ]   |
+| Despliegue        | Render / Railway / Fly.io |  [ ]   |
+| Bonus             | Docker + Swagger          |  [ ]   |
 
 ---
 
@@ -52,22 +53,23 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 ├── package.json
 └── README.md
 ```
+
 ---
 
 ## 🧠 Funcionalidades principales
 
-| Módulo | Descripción | Estado |
-|---------|--------------|:------:|
-| 👤 Usuarios | Registro, login, roles (admin/user) | [ ] |
-| 🔑 Autenticación | JWT con refresh y expiración | [ ] |
-| 📁 Proyectos | CRUD, colaboradores | [ ] |
-| ✅ Tareas | CRUD, asignación a usuarios | [ ] |
-| 🔒 Seguridad | Middleware de auth, roles | [ ] |
-| ⚙️ Validación | Esquemas Zod o Joi | [ ] |
-| 🧪 Testing | Tests de endpoints básicos | [ ] |
-| ☁️ Despliegue | Proyecto en la nube | [ ] |
-| 🐳 Docker | Contenedores reproducibles | [ ] |
-| 📜 Swagger | Documentación de API | [ ] |
+| Módulo           | Descripción                         | Estado |
+| ---------------- | ----------------------------------- | :----: |
+| 👤 Usuarios      | Registro, login, roles (admin/user) |  [ ]   |
+| 🔑 Autenticación | JWT con refresh y expiración        |  [ ]   |
+| 📁 Proyectos     | CRUD, colaboradores                 |  [ ]   |
+| ✅ Tareas        | CRUD, asignación a usuarios         |  [ ]   |
+| 🔒 Seguridad     | Middleware de auth, roles           |  [ ]   |
+| ⚙️ Validación    | Esquemas Zod o Joi                  |  [ ]   |
+| 🧪 Testing       | Tests de endpoints básicos          |  [ ]   |
+| ☁️ Despliegue    | Proyecto en la nube                 |  [ ]   |
+| 🐳 Docker        | Contenedores reproducibles          |  [ ]   |
+| 📜 Swagger       | Documentación de API                |  [ ]   |
 
 ---
 
@@ -83,4 +85,3 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | `POST`   | `/api/projects/:id/tasks` | Crear tarea               |
 | `PATCH`  | `/api/tasks/:id`          | Actualizar tarea          |
 | `DELETE` | `/api/tasks/:id`          | Eliminar tarea            |
-
