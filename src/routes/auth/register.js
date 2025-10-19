@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
+import bcrypt from 'bcrypt'
 
 const Prisma = new PrismaClient()
 
@@ -23,7 +24,10 @@ const registerUser = async (req, res) => {
   let user = null
   try {
     user = await Prisma.users.create({
-      data: userInfo
+      data: {
+        ...userInfo,
+        password: await bcrypt.hash(userInfo.password, 10)
+      }
     })
   } catch (err) {
     if (err.code === 'P2002') {

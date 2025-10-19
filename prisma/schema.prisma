@@ -15,3 +15,10 @@ model users {
   role     String    @default("user")
   creation DateTime @default(now())
 }
+
+model projects {
+  id      Int       @id @default(autoincrement())
+  name    String
+  workers  String[]
+  tasks    Json[]
+}

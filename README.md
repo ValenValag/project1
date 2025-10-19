@@ -25,7 +25,7 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | ORM               | Prisma                    |  [x]   |
 | Base de datos     | PostgreSQL                |  [x]   |
 | Validación        | Zod                       |  [ ]   |
-| Autenticación     | JWT + bcrypt              |  [ ]   |
+| Autenticación     | JWT + bcrypt              |  [x]   |
 | Seguridad         | helmet, cors              |  [ ]   |
 | Logging           | morgan                    |  [ ]   |
 | Variables entorno | dotenv                    |  [x]   |
@@ -60,8 +60,8 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 
 | Módulo           | Descripción                         | Estado |
 | ---------------- | ----------------------------------- | :----: |
-| 👤 Usuarios      | Registro, login, roles (admin/user) |  [ ]   |
-| 🔑 Autenticación | JWT con refresh y expiración        |  [ ]   |
+| 👤 Usuarios      | Registro, login, roles (admin/user) |  [x]   |
+| 🔑 Autenticación | JWT con refresh y expiración        |  [x]   |
 | 📁 Proyectos     | CRUD, colaboradores                 |  [ ]   |
 | ✅ Tareas        | CRUD, asignación a usuarios         |  [ ]   |
 | 🔒 Seguridad     | Middleware de auth, roles           |  [ ]   |
