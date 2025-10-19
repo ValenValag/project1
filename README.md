@@ -80,10 +80,12 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | `POST`   | `/api/auth/register`      | Registrar usuario         |
 | `POST`   | `/api/auth/login`         | Iniciar sesión            |
 | `GET`    | `/api/projects`           | Ver proyectos del usuario |
+| `GET`    | `/api/projects/:user`     | Ver proyectos del usuario | ADMIN
 | `POST`   | `/api/projects`           | Crear proyecto            |
 | `GET`    | `/api/projects/:id`       | Ver proyecto con tareas   |
 | `POST`   | `/api/projects/:id/tasks` | Crear tarea               |
 | `PATCH`  | `/api/tasks/:id`          | Actualizar tarea          |
 | `DELETE` | `/api/tasks/:id`          | Eliminar tarea            |
+| `GET`    | `/api/users`              | Ver usuarios y sus datos  | ADMIN
 
 ### _Programado por ValenValag_
