@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
+import { z } from 'zod'
+import { projectModel } from '../models/projects.js'
 
 const Prisma = new PrismaClient()
 
@@ -44,6 +46,7 @@ const createProject = async (req, res) => {
     return
   }
   try {
+    await z.parse(projectModel, project)
     await Prisma.projects.create({
       data: project
     })
@@ -52,6 +55,15 @@ const createProject = async (req, res) => {
       message: 'Project created successfully'
     })
   } catch (err) {
+    if (err instanceof z.ZodError) {
+      const message = JSON.parse(err.message)
+      res.status(400).json({
+        success: false,
+        message: message[0].message
+      })
+      return
+    }
+
     res.status(400).json({
       success: false,
       message: 'Failed to create project'

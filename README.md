@@ -24,7 +24,7 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | Framework         | Express.js                |  [x]   |
 | ORM               | Prisma                    |  [x]   |
 | Base de datos     | PostgreSQL                |  [x]   |
-| Validación        | Zod                       |  [ ]   |
+| Validación        | Zod                       |  [x]   |
 | Autenticación     | JWT + bcrypt              |  [x]   |
 | Seguridad         | helmet, cors              |  [ ]   |
 | Logging           | morgan                    |  [ ]   |
@@ -62,14 +62,13 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | ---------------- | ----------------------------------- | :----: |
 | 👤 Usuarios      | Registro, login, roles (admin/user) |  [x]   |
 | 🔑 Autenticación | JWT con refresh y expiración        |  [x]   |
-| 📁 Proyectos     | CRUD, colaboradores                 |  [ ]   |
-| ✅ Tareas        | CRUD, asignación a usuarios         |  [ ]   |
-| 🔒 Seguridad     | Middleware de auth, roles           |  [ ]   |
-| ⚙️ Validación    | Esquemas Zod o Joi                  |  [ ]   |
-| 🧪 Testing       | Tests de endpoints básicos          |  [ ]   |
+| 📁 Proyectos     | CRUD, colaboradores                 |  [x]   |
+| 🔒 Seguridad     | Middleware de auth, roles           |  [x]   |
+| ⚙️ Validación    | Esquemas Zod o Joi                  |  [x]   |
+| 🧪 Testing       | Tests de endpoints básicos          |  [x]   |
 | ☁️ Despliegue    | Proyecto en la nube                 |  [ ]   |
 | 🐳 Docker        | Contenedores reproducibles          |  [ ]   |
-| 📜 Swagger       | Documentación de API                |  [ ]   |
+| 📜 Swagger       | Documentación de API                |  [x]   |
 
 ---
 
@@ -80,12 +79,9 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | `POST`   | `/api/auth/register`      | Registrar usuario         |
 | `POST`   | `/api/auth/login`         | Iniciar sesión            |
 | `GET`    | `/api/projects`           | Ver proyectos del usuario |
-| `GET`    | `/api/projects/:user`     | Ver proyectos del usuario | ADMIN
 | `POST`   | `/api/projects`           | Crear proyecto            |
 | `GET`    | `/api/projects/:id`       | Ver proyecto con tareas   |
-| `POST`   | `/api/projects/:id/tasks` | Crear tarea               |
-| `PATCH`  | `/api/tasks/:id`          | Actualizar tarea          |
-| `DELETE` | `/api/tasks/:id`          | Eliminar tarea            |
+| `GET`    | `/api/projects/:user`     | Ver proyectos del usuario | ADMIN
 | `GET`    | `/api/users`              | Ver usuarios y sus datos  | ADMIN
 
 ### _Programado por ValenValag_

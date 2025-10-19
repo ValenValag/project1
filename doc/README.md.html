@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>README.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "";
+    var thisFile = "README.md";
+    var defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h1">
+        <a href="#proyecto-backend-api-de-gestion-de-tareas-colaborativa">🧩 Proyecto Backend — API de Gestión de Tareas Colaborativa</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#objetivo">🚀 Objetivo</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#stack-tecnologico">🧱 Stack Tecnológico</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#estructura-del-proyecto">📁 Estructura del proyecto</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#funcionalidades-principales">🧠 Funcionalidades principales</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#endpoints">🔗 Endpoints</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#programado-por-valenvalag">Programado por ValenValag</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="docs markdown"><div class="pilwrap" id="proyecto-backend-api-de-gestion-de-tareas-colaborativa">
+  <h1>
+    <a href="#proyecto-backend-api-de-gestion-de-tareas-colaborativa" name="proyecto-backend-api-de-gestion-de-tareas-colaborativa" class="pilcrow"></a>
+🧩 Proyecto Backend — API de Gestión de Tareas Colaborativa
+  </h1>
+</div>
+<p>API REST desarrollada con <strong>Node.js + Express + Prisma + PostgreSQL</strong>, que permite gestionar usuarios, proyectos y tareas con autenticación JWT y control de roles.</p>
+<hr>
+<div class="pilwrap" id="objetivo">
+  <h2>
+    <a href="#objetivo" name="objetivo" class="pilcrow"></a>
+🚀 Objetivo
+  </h2>
+</div>
+<p>Construir una API profesional y modular aplicando buenas prácticas de backend:</p>
+<ul>
+<li>Arquitectura escalable</li>
+<li>Seguridad (JWT, roles)</li>
+<li>Validación de datos</li>
+<li>Despliegue en la nube</li>
+<li>Testing básico</li>
+</ul>
+<hr>
+<div class="pilwrap" id="stack-tecnologico">
+  <h2>
+    <a href="#stack-tecnologico" name="stack-tecnologico" class="pilcrow"></a>
+🧱 Stack Tecnológico
+  </h2>
+</div>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Tecnología</th>
+<th style="text-align:center">Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lenguaje</td>
+<td>Node.js (v20+)</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Express.js</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>ORM</td>
+<td>Prisma</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>Base de datos</td>
+<td>PostgreSQL</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>Validación</td>
+<td>Zod</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>Autenticación</td>
+<td>JWT + bcrypt</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>helmet, cors</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+<tr>
+<td>Logging</td>
+<td>morgan</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+<tr>
+<td>Variables entorno</td>
+<td>dotenv</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Jest + Supertest</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+<tr>
+<td>Despliegue</td>
+<td>Render / Railway / Fly.io</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+<tr>
+<td>Bonus</td>
+<td>Docker + Swagger</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="pilwrap" id="estructura-del-proyecto">
+  <h2>
+    <a href="#estructura-del-proyecto" name="estructura-del-proyecto" class="pilcrow"></a>
+📁 Estructura del proyecto
+  </h2>
+</div>
+<pre><code>├── src/
+│ ├── config/ # Configuración (BD, env)
+│ ├── controllers/ # Lógica de negocio
+│ ├── routes/ # Endpoints de la API
+│ ├── models/ # Modelos de datos (Prisma)
+│ ├── utils/ # Helpers y utilidades
+│ └── app.js # App principal
+├── prisma/
+│ └── schema.prisma
+├── tests/
+│ └── app.test.js
+├── .env
+├── package.json
+└── README.md
+</code></pre>
+<hr>
+<div class="pilwrap" id="funcionalidades-principales">
+  <h2>
+    <a href="#funcionalidades-principales" name="funcionalidades-principales" class="pilcrow"></a>
+🧠 Funcionalidades principales
+  </h2>
+</div>
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Descripción</th>
+<th style="text-align:center">Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>👤 Usuarios</td>
+<td>Registro, login, roles (admin/user)</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>🔑 Autenticación</td>
+<td>JWT con refresh y expiración</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>📁 Proyectos</td>
+<td>CRUD, colaboradores</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>🔒 Seguridad</td>
+<td>Middleware de auth, roles</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>⚙️ Validación</td>
+<td>Esquemas Zod o Joi</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>🧪 Testing</td>
+<td>Tests de endpoints básicos</td>
+<td style="text-align:center">[x]</td>
+</tr>
+<tr>
+<td>☁️ Despliegue</td>
+<td>Proyecto en la nube</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+<tr>
+<td>🐳 Docker</td>
+<td>Contenedores reproducibles</td>
+<td style="text-align:center">[ ]</td>
+</tr>
+<tr>
+<td>📜 Swagger</td>
+<td>Documentación de API</td>
+<td style="text-align:center">[x]</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="pilwrap" id="endpoints">
+  <h2>
+    <a href="#endpoints" name="endpoints" class="pilcrow"></a>
+🔗 Endpoints
+  </h2>
+</div>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Ruta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/auth/register</code></td>
+<td>Registrar usuario</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/auth/login</code></td>
+<td>Iniciar sesión</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/projects</code></td>
+<td>Ver proyectos del usuario</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/projects</code></td>
+<td>Crear proyecto</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/projects/:id</code></td>
+<td>Ver proyecto con tareas</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/projects/:user</code></td>
+<td>Ver proyectos del usuario</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/users</code></td>
+<td>Ver usuarios y sus datos</td>
+</tr>
+</tbody>
+</table>
+<div class="pilwrap" id="programado-por-valenvalag">
+  <h3>
+    <a href="#programado-por-valenvalag" name="programado-por-valenvalag" class="pilcrow"></a>
+<em>Programado por ValenValag</em>
+  </h3>
+</div>
+</div>
+  </div>
+</body>
+</html>

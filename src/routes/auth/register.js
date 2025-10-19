@@ -2,6 +2,8 @@
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
 import bcrypt from 'bcrypt'
+import { userModel } from '../../models/user.js'
+import { z } from 'zod'
 
 const Prisma = new PrismaClient()
 
@@ -23,6 +25,8 @@ const registerUser = async (req, res) => {
 
   let user = null
   try {
+    await userModel.parse(userInfo)
+
     user = await Prisma.users.create({
       data: {
         ...userInfo,
@@ -34,6 +38,15 @@ const registerUser = async (req, res) => {
       res.status(400).json({
         success: false,
         message: 'Email in use already!'
+      })
+      return
+    }
+
+    if (err instanceof z.ZodError) {
+      const message = JSON.parse(err.message)
+      res.status(400).json({
+        success: false,
+        message: message[0].message
       })
       return
     }

@@ -3,6 +3,8 @@ import express from 'express'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { PrismaClient } from '@prisma/client'
+import { loginModel } from '../../models/user.js'
+import { z } from 'zod'
 
 const Prisma = new PrismaClient()
 
@@ -20,6 +22,19 @@ const loginUser = async (req, res) => {
       message: 'No data received'
     })
     return
+  }
+
+  try {
+    await z.parse(loginModel, data)
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      const message = JSON.parse(err.message)
+      res.status(400).json({
+        success: false,
+        message: message[0].message
+      })
+      return
+    }
   }
 
   const { email, password } = data
