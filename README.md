@@ -26,12 +26,12 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | Base de datos     | PostgreSQL                |  [x]   |
 | Validación        | Zod                       |  [x]   |
 | Autenticación     | JWT + bcrypt              |  [x]   |
-| Seguridad         | helmet, cors              |  [ ]   |
-| Logging           | morgan                    |  [ ]   |
+| Seguridad         | helmet, cors              |  [x]   |
+| Logging           | morgan                    |  [x]   |
 | Variables entorno | dotenv                    |  [x]   |
-| Testing           | Jest + Supertest          |  [ ]   |
-| Despliegue        | Render / Railway / Fly.io |  [ ]   |
-| Bonus             | Docker + Swagger          |  [ ]   |
+| Testing           | Jest + Supertest          |  [x]   |
+| Despliegue        | Render / Railway / Fly.io |  [x]   |
+| Bonus             | Docker + Swagger          |  [x]   |
 
 ---
 
@@ -66,8 +66,8 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | 🔒 Seguridad     | Middleware de auth, roles           |  [x]   |
 | ⚙️ Validación    | Esquemas Zod o Joi                  |  [x]   |
 | 🧪 Testing       | Tests de endpoints básicos          |  [x]   |
-| ☁️ Despliegue    | Proyecto en la nube                 |  [ ]   |
-| 🐳 Docker        | Contenedores reproducibles          |  [ ]   |
+| ☁️ Despliegue    | Proyecto en la nube                 |  [x]   |
+| 🐳 Docker        | Contenedores reproducibles          |  [x]   |
 | 📜 Swagger       | Documentación de API                |  [x]   |
 
 ---

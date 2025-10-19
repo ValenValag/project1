@@ -1,6 +1,9 @@
 // ---
 import express from 'express'
 import dotenv from 'dotenv'
+import helmet from 'helmet'
+import cors from 'cors'
+import morgan from 'morgan'
 
 import { registerUser } from './routes/auth/register.js'
 import { loginUser } from './routes/auth/login.js'
@@ -19,6 +22,9 @@ const api = express()
 const PORT = process.env.PORT || 3000
 
 api.use(express.json())
+api.use(helmet())
+api.use(cors())
+api.use(morgan('dev'))
 
 api.post('/api/auth/register', registerUser)
 api.post('/api/auth/login', loginUser)

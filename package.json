@@ -1,6 +1,6 @@
 {
     "name": "project-1",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "",
     "main": "./src/app.js",
     "scripts": {
@@ -17,16 +17,21 @@
     "dependencies": {
         "@prisma/client": "^6.17.1",
         "bcrypt": "^6.0.0",
+        "cors": "^2.8.5",
         "docker": "^1.0.0",
         "dotenv": "^17.2.3",
         "express": "5.1.0",
+        "helmet": "^8.1.0",
         "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.1",
         "pg": "^8.16.3",
         "zod": "^4.1.12"
     },
     "devDependencies": {
+        "@babel/preset-env": "^7.24.8",
         "@types/express": "^5.0.3",
         "@types/node": "^24.8.1",
+        "babel-jest": "^30.2.0",
         "prettier": "^3.6.2",
         "prisma": "^6.17.1",
         "standard": "^17.1.2"
