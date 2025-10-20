@@ -7,7 +7,7 @@ import morgan from 'morgan'
 
 import { registerUser } from './routes/auth/register.js'
 import { loginUser } from './routes/auth/login.js'
-import { getProjects, createProject } from './routes/projects.js'
+import { getProjects, createProject, getProjectByID } from './routes/projects.js'
 import { getUsers } from './routes/users.js'
 
 import { checkJWT } from './middlewares/authorization.js'
@@ -30,6 +30,7 @@ api.post('/api/auth/register', registerUser)
 api.post('/api/auth/login', loginUser)
 api.get('/api/projects', checkJWT, getProjects)
 api.post('/api/projects', checkJWT, createProject)
+api.get('/api/projects/:id', checkJWT, getProjectByID)
 api.get('/api/users', checkJWT, isAdmin, getUsers)
 
 api.listen(PORT, () => {

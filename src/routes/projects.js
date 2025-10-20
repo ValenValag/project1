@@ -71,7 +71,42 @@ const createProject = async (req, res) => {
   }
 }
 
+/**
+ * @param {express.Request} req
+ * @param {express.Response} res
+ */
+const getProjectByID = async (req, res) => {
+  const id = req.params.id
+  try {
+    const project = await Prisma.projects.findUnique({
+      where:
+        {
+          id: Number(id)
+        }
+    })
+
+    if (project == null) {
+      res.status(400).json({
+        success: false,
+        message: 'No project found'
+      })
+      return
+    }
+
+    res.status(200).json({
+      success: true,
+      message: project
+    })
+  } catch (err) {
+    res.status(400).json({
+      success: false,
+      message: 'Failed to get project ' + err
+    })
+  }
+}
+
 export {
   getProjects,
-  createProject
+  createProject,
+  getProjectByID
 }

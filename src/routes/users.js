@@ -9,12 +9,19 @@ const Prisma = new PrismaClient()
  * @param {express.Response} res
  */
 const getUsers = async (req, res) => {
-  const users = await Prisma.users.findMany()
+  try {
+    const users = await Prisma.users.findMany()
 
-  res.status(200).json({
-    success: true,
-    data: users
-  })
+    res.status(200).json({
+      success: true,
+      data: users
+    })
+  } catch (err) {
+    res.status(400).json({
+      success: false,
+      data: 'Failed to get users!'
+    })
+  }
 }
 
 export {

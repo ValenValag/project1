@@ -1,0 +1,48 @@
+### Registro de usuario
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "User",
+  "email": "example@gmail.com",
+  "password": "Password.2",
+  "role": "user"
+}
+
+### Inicio de sesión
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "example@gmail.com",
+  "password": "Password.2"
+}
+
+### Obtener proyectos
+GET http://localhost:4000/api/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ2YWwuYWdhcmNpYTI2QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MDg5Njc1MiwiZXhwIjoxNzYxMDY5NTUyfQ.WKK_kYAS2z2Vu3R82Tt7bIJ2hgTIdD17Cmvsn2t4Zng
+
+### Crear proyecto
+POST http://localhost:4000/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ2YWwuYWdhcmNpYTI2QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MDg5Njc1MiwiZXhwIjoxNzYxMDY5NTUyfQ.WKK_kYAS2z2Vu3R82Tt7bIJ2hgTIdD17Cmvsn2t4Zng
+
+{
+  "name": "Proyecto 1",
+  "workers": [
+    "example@gmail.com",
+    "user2@gmail.com"
+  ],
+  "tasks": [
+    {"name": "Tarea 1"},
+    {"name": "Tarea 2"}
+  ]
+}
+
+### Obtener usuarios (ADMIN)
+GET http://localhost:4000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzYwOTAxNjgyLCJleHAiOjE3NjEwNzQ0ODJ9.0zGcF6pSdfHrKjFZ0ol6cXyykrcZxM2Zincb3G15jAw
+
+### Obtener proyecto por id
+GET http://localhost:4000/api/projects/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ2YWwuYWdhcmNpYTI2QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MDg5Njc1MiwiZXhwIjoxNzYxMDY5NTUyfQ.WKK_kYAS2z2Vu3R82Tt7bIJ2hgTIdD17Cmvsn2t4Zng

@@ -39,18 +39,19 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 
 ```
 ├── src/
-│ ├── config/ # Configuración (BD, env)
-│ ├── controllers/ # Lógica de negocio
+│ ├── middlewares/ # Middlewares de la API
 │ ├── routes/ # Endpoints de la API
-│ ├── models/ # Modelos de datos (Prisma)
-│ ├── utils/ # Helpers y utilidades
+│ ├── models/ # Modelos de datos (Zod)
 │ └── app.js # App principal
 ├── prisma/
 │ └── schema.prisma
 ├── tests/
-│ └── app.test.js
+│ └── api.http
 ├── .env
 ├── package.json
+├── package-lock.json
+├── Dockerfile
+├── docker-compose.yml
 └── README.md
 ```
 
@@ -81,7 +82,6 @@ Construir una API profesional y modular aplicando buenas prácticas de backend:
 | `GET`    | `/api/projects`           | Ver proyectos del usuario |
 | `POST`   | `/api/projects`           | Crear proyecto            |
 | `GET`    | `/api/projects/:id`       | Ver proyecto con tareas   |
-| `GET`    | `/api/projects/:user`     | Ver proyectos del usuario | ADMIN
 | `GET`    | `/api/users`              | Ver usuarios y sus datos  | ADMIN
 
 ### _Programado por ValenValag_
